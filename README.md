@@ -92,6 +92,7 @@ Open terminal and run:
 ```bash
 mkdir ai-playwright-mcp
 cd ai-playwright-mcp
+mkdir pages
 npm init -y
 ```
 <img width="910" height="837" alt="image" src="https://github.com/user-attachments/assets/a6c6f1ca-e1da-4414-908b-5265eae65ca3" />
