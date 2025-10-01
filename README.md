@@ -160,6 +160,8 @@ Open report:
 ```bash
 npx playwright show-report
 ```
+<img width="1659" height="836" alt="image" src="https://github.com/user-attachments/assets/69620ea8-6b37-4cde-8ee2-ecb1d5789d87" />
+
 <img width="1730" height="869" alt="image" src="https://github.com/user-attachments/assets/9b071706-bf3c-4d3b-bd74-9b6f578b812f" />
 <img width="1888" height="960" alt="image" src="https://github.com/user-attachments/assets/3d9b63fe-8dbc-4cf7-a13a-b9e8970bcd72" />
 
