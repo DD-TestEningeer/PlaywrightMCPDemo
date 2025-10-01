@@ -18,15 +18,23 @@ This documentation provides a complete beginner-friendly walkthrough for setting
 
 1. **GitHub**
 
-   - Go to [https://github.com](https://github.com)
+   - Go to https://github.com/signup 
    - Sign up with free tier
    - Verify email and enable GitHub Free
 
 2. **GitHub Copilot (Free Trial)**
-
-   - Go to [https://github.com/features/copilot](https://github.com/features/copilot)
-   - Start free trial (14 or 30 days)
+ **Note** => GitHub Copilot Free is available to individual developers who don't have access to Copilot through an organization or enterprise. This free plan includes **limited** access to select Copilot features, allowing you to try AI-powered coding assistance at no cost.
+ 
+   - Go to https://github.com/settings/copilot/features 
+   - Start free trial (30 days)
+   - Open the url - https://github.com/copilot
    - You will need to link to VS Code
+   - Open the url - https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
+   
+<img width="1920" height="956" alt="image" src="https://github.com/user-attachments/assets/35fda416-9907-4094-8b87-94fe195774cb" />
+<img width="1880" height="949" alt="image" src="https://github.com/user-attachments/assets/1996e761-55ae-4346-8b21-b7c3471ea892" />
+<img width="1876" height="968" alt="image" src="https://github.com/user-attachments/assets/23a427e2-5fb8-4d23-ae75-10166ea157bf" />
+
 
 ---
 
