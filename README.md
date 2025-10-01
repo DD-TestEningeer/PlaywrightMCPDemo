@@ -53,6 +53,8 @@ This documentation provides a complete beginner-friendly walkthrough for setting
   node -v
   npm -v
   ```
+  <img width="945" height="348" alt="image" src="https://github.com/user-attachments/assets/9870f6b5-c1a4-4ddc-b835-537f590d4295" />
+
 
 ### Install Git
 
@@ -63,6 +65,9 @@ This documentation provides a complete beginner-friendly walkthrough for setting
   ```bash
   git --version
   ```
+<img width="580" height="139" alt="image" src="https://github.com/user-attachments/assets/2c1731f6-5a92-41ad-b4f2-96ccfc54186c" />
+
+  
 
 ### Install VS Code
 
@@ -72,6 +77,11 @@ This documentation provides a complete beginner-friendly walkthrough for setting
 
   - GitHub Copilot
   - JavaScript/TypeScript support
+
+  <img width="1256" height="633" alt="image" src="https://github.com/user-attachments/assets/1b99aae5-83bf-4704-9d1f-a04826cecaf2" />
+  <img width="1920" height="992" alt="image" src="https://github.com/user-attachments/assets/9efd5f34-4f5b-484b-8595-3cca9da16831" />
+
+
 
 ---
 
