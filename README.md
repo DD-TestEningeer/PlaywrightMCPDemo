@@ -1,0 +1,315 @@
+# AI-Driven Test Automation Demo Guide
+
+Using Agent LLM, Playwright MCP, GitHub Copilot & GitHub Actions
+
+This documentation provides a complete beginner-friendly walkthrough for setting up and running an **AI-driven test automation demo** using free or trial tools.
+
+---
+
+## 1. Prerequisites
+
+- Computer with **Windows 10+** or **macOS**
+- Stable internet connection
+- Basic familiarity with command line
+
+---
+
+## 2. Account Signups
+
+1. **GitHub**
+
+   - Go to [https://github.com](https://github.com)
+   - Sign up with free tier
+   - Verify email and enable GitHub Free
+
+2. **GitHub Copilot (Free Trial)**
+
+   - Go to [https://github.com/features/copilot](https://github.com/features/copilot)
+   - Start free trial (14 or 30 days)
+   - You will need to link to VS Code
+
+---
+
+## 3. Tool Installations
+
+### Install Node.js
+
+- Download LTS version from [https://nodejs.org](https://nodejs.org)
+- Install with defaults
+- Verify installation:
+
+  ```bash
+  node -v
+  npm -v
+  ```
+
+### Install Git
+
+- Download from [https://git-scm.com/downloads](https://git-scm.com/downloads)
+- Install with defaults
+- Verify:
+
+  ```bash
+  git --version
+  ```
+
+### Install VS Code
+
+- Download from [https://code.visualstudio.com](https://code.visualstudio.com)
+- Install with defaults
+- Install extensions:
+
+  - GitHub Copilot
+  - JavaScript/TypeScript support
+
+---
+
+## 4. Project Setup
+
+Open terminal and run:
+
+```bash
+mkdir ai-playwright-mcp
+cd ai-playwright-mcp
+npm init -y
+```
+
+Install Playwright:
+
+```bash
+npm init playwright@latest
+npx playwright install
+```
+
+Check Playwright version:
+
+```bash
+npx playwright --version
+```
+
+---
+
+## 5. Configure Project Structure
+
+```plaintext
+ai-playwright-mcp/
+├── package.json
+├── playwright.config.js
+├── tests/
+│   └── example.spec.js
+├── pages/
+│   └── home.page.js
+└── utils/
+    └── helpers.js
+```
+
+---
+
+## 6. Writing First Test
+
+Create `tests/example.spec.js`
+
+```js
+const { test, expect } = require("@playwright/test");
+
+test("example: page title", async ({ page }) => {
+  await page.goto("https://example.com");
+  await expect(page).toHaveTitle(/Example Domain/);
+});
+```
+
+Run test:
+
+```bash
+npx playwright test
+```
+
+Open report:
+
+```bash
+npx playwright show-report
+```
+
+---
+
+## 7. Page Object Example
+
+Create `pages/home.page.js`
+
+```js
+class HomePage {
+  constructor(page) {
+    this.page = page;
+    this.heading = page.locator("h1");
+  }
+  async goto() {
+    await this.page.goto("https://example.com");
+  }
+  async getHeadingText() {
+    return await this.heading.textContent();
+  }
+}
+module.exports = HomePage;
+```
+
+---
+
+## 8. Using GitHub Copilot
+
+1. Open VS Code
+2. Install **GitHub Copilot extension**
+3. Sign in with GitHub account
+4. Type a comment in test file:
+
+```js
+// Test login functionality with valid credentials
+```
+
+Copilot will suggest test code → accept or refine
+
+---
+
+## 9. Agent LLM Setup
+
+1. Install Agent LLM (open-source option):
+
+   - Clone: `git clone https://github.com/Josh-XT/Agent-LLM.git`
+   - Follow instructions to set up with local LLM (GPT4All / llama.cpp)
+
+2. Run MCP server for Playwright:
+
+```bash
+npx @playwright/mcp@latest --isolated
+```
+
+3. Connect Agent LLM to Playwright MCP for autonomous test generation
+
+---
+
+## 10. Reporting Setup
+
+Update `playwright.config.js`
+
+```js
+const { defineConfig } = require("@playwright/test");
+
+module.exports = defineConfig({
+  testDir: "tests",
+  timeout: 30000,
+  retries: 1,
+  use: {
+    headless: true,
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
+    trace: "retain-on-failure",
+  },
+  reporter: [["html", { open: "never" }]],
+});
+```
+
+Run tests and open reports:
+
+```bash
+npx playwright test
+npx playwright show-report
+```
+
+---
+
+## 11. GitHub Repository Setup
+
+Initialize git:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+Connect to GitHub:
+
+```bash
+git remote add origin https://github.com/<your-username>/ai-playwright-mcp.git
+git push -u origin main
+```
+
+---
+
+## 12. GitHub Actions CI Setup
+
+Create file `.github/workflows/playwright.yml`
+
+```yaml
+name: Playwright Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npm test
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+```
+
+Push code and see test results in GitHub Actions tab
+
+---
+
+## 13. Live Demo Flow
+
+1. Open VS Code
+2. Write test case with Copilot suggestion
+3. Run test locally with Playwright MCP
+4. View HTML report with screenshots and trace
+5. Commit and push to GitHub
+6. Verify CI run in GitHub Actions
+7. Download report artifact from Actions
+
+---
+
+## 14. Best Practices
+
+- Always review Copilot suggestions before using
+- Use stable test data to avoid flaky tests
+- Limit free-tier usage (Copilot trial, GitHub Actions minutes)
+- Keep tests organized in pages/ and utils/
+- Use Agent LLM for autonomous exploration only in safe test environments
+
+---
+
+## 15. Next Steps
+
+- Extend tests for login, forms, API validations
+- Experiment with parallel test execution in GitHub Actions
+- Try integrating API + UI tests together
+- Explore alternative free LLMs with Agent LLM
+
+---
+
+## You are Ready
+
+You now have a fully working **AI-driven test automation demo project** with:
+
+- Local Playwright tests
+- GitHub Copilot code generation
+- Agent LLM autonomous exploration
+- GitHub Actions CI/CD pipeline
+- HTML reports with screenshots and traces
+
+Practice regularly to gain confidence and scale your QA automation.
+
+---
+
+## Thank you!
+
+## @Dnyaneshwar Divekar
