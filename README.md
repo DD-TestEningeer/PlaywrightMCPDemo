@@ -34,6 +34,9 @@ This documentation provides a complete beginner-friendly walkthrough for setting
 <img width="1920" height="956" alt="image" src="https://github.com/user-attachments/assets/35fda416-9907-4094-8b87-94fe195774cb" />
 <img width="1880" height="949" alt="image" src="https://github.com/user-attachments/assets/1996e761-55ae-4346-8b21-b7c3471ea892" />
 <img width="1876" height="968" alt="image" src="https://github.com/user-attachments/assets/23a427e2-5fb8-4d23-ae75-10166ea157bf" />
+<img width="1920" height="981" alt="image" src="https://github.com/user-attachments/assets/e6585ff2-a1d8-4c99-9a6d-fb92dd204d1e" />
+<img width="1912" height="1024" alt="image" src="https://github.com/user-attachments/assets/09a92a60-a983-42e9-8254-3e8b7be137b9" />
+
 
 
 ---
