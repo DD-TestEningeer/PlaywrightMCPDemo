@@ -129,6 +129,7 @@ ai-playwright-mcp/
 └── utils/
     └── helpers.js
 ```
+<img width="1886" height="822" alt="image" src="https://github.com/user-attachments/assets/2b3aa5cf-2f08-42e4-8d31-d998475baff4" />
 
 ---
 
@@ -151,11 +152,16 @@ Run test:
 npx playwright test
 ```
 
+<img width="1566" height="804" alt="image" src="https://github.com/user-attachments/assets/20a9d9b0-62b7-4ffc-a209-5ea4b390297a" />
+
+
 Open report:
 
 ```bash
 npx playwright show-report
 ```
+<img width="1730" height="869" alt="image" src="https://github.com/user-attachments/assets/9b071706-bf3c-4d3b-bd74-9b6f578b812f" />
+<img width="1888" height="960" alt="image" src="https://github.com/user-attachments/assets/3d9b63fe-8dbc-4cf7-a13a-b9e8970bcd72" />
 
 ---
 
