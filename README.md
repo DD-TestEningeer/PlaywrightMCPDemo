@@ -94,6 +94,8 @@ mkdir ai-playwright-mcp
 cd ai-playwright-mcp
 npm init -y
 ```
+<img width="910" height="837" alt="image" src="https://github.com/user-attachments/assets/a6c6f1ca-e1da-4414-908b-5265eae65ca3" />
+
 
 Install Playwright:
 
@@ -101,12 +103,16 @@ Install Playwright:
 npm init playwright@latest
 npx playwright install
 ```
+<img width="1212" height="982" alt="image" src="https://github.com/user-attachments/assets/bc724947-01cc-47cc-9b57-de0b0ac02285" />
+<img width="1264" height="962" alt="image" src="https://github.com/user-attachments/assets/edc6bb22-cff3-4c55-911d-dc8fd8b66243" />
+
 
 Check Playwright version:
 
 ```bash
 npx playwright --version
 ```
+<img width="984" height="259" alt="image" src="https://github.com/user-attachments/assets/d4d98e2f-983c-4b9b-95fb-fc51afc11405" />
 
 ---
 
